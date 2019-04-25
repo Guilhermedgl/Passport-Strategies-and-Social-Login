@@ -1,7 +1,14 @@
 <h1>Private Page</h1>
 {{#if user}}
-  <div>
+{{#if user.username}}
+<div>
+  <h1>Hello {{user.username}}</h1>
+  <p>
+{{/if}}
     <a href="/">Index</a>
+  </p>
+  <p>
     <a href="/logout">Logout</a>
-  </div>
+  </p>
+</div>
 {{/if}}

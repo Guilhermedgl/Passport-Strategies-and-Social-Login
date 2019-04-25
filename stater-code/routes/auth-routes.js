@@ -68,6 +68,7 @@ authRoutes.get('/auth/slack/callback', passport.authenticate('slack', {
 }));
 
 authRoutes.get('/private-page', ensureLogin.ensureLoggedIn(), (req, res) => {
+  console.log(req.user)
   res.render('private', { user: req.user });
 });
 
